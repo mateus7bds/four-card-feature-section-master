@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+	<link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+	<title>Frontend Mentor | Four card feature section</title>
+	<style>
+		@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap');
+		* {
+			margin: 0;
+			padding: 0;
+			box-sizing: border-box;
+			font-family: 'Poppins', sans-serif;
+			font-size: 15px;
+		}
+		:root {
+			--red: hsl(0, 78%, 62%);
+			--cyan: hsl(180, 62%, 55%);
+			--orange: hsl(34, 97%, 64%);
+			--blue: hsl(212, 86%, 64%);
+			--very-dark-blue: hsl(234, 12%, 34%);
+			--grayish-blue: hsl(229, 6%, 66%);
+			--very-light-gray: hsl(0, 0%, 98%);
+		}
+		main#tudo {
+			width: 100%;
+			height: 768px;
+			background-color: var(--very-light-gray);
+			display: flex;
+			flex-direction: row;
+			flex-wrap: nowrap;
+			justify-content: center;
+			align-items: center;
+		}
+		main#tudo section#container header#cabecalho h1 {
+			color: var(--very-dark-blue);
+			text-align: center;
+			font-size: 2em;
+		}
+		main#tudo section#container header#cabecalho h1#titulo1 {
+			font-weight: 200;
+		}
+		main#tudo section#container header#cabecalho h1#titulo2 {
+			font-weight: 600;
+		}
+		main#tudo section#container  header#cabecalho p#texto {
+			color: var(--grayish-blue);
+			font-weight: 400;
+			width: 550px;
+			text-align: center;
+			line-height: 160%;
+			margin: 1rem auto;
+		}
+		div#cards {
+			display: flex;
+			flex-direction: row;
+			flex-wrap: wrap;
+			justify-content: center;
+			align-items: center;
+			margin-top: 2.5rem;
+			max-width: 1112px;
+		}
+		main#tudo section#container div.card h3.titulo-card {
+			color: var(--very-dark-blue);
+			font-size: 1.2em;
+		}
+		main#tudo section#container div.card p.texto-card {
+			color: var(--grayish-blue);
+			width: 300px;
+			margin-top: 0.5rem;
+		}
+		main#tudo section#container div#cards div#card-supervisor {
+			border-top: 5px solid var(--cyan);
+			position: relative;
+			top: 140px;
+			left: -1rem;
+		}
+		main#tudo section#container div#cards div#card-team-builder {
+			border-top: 5px solid var(--red);
+		}
+		main#tudo section#container div#cards div#card-karma {
+			border-top: 5px solid var(--orange);
+			order: 4;
+			margin-top: 1rem;
+		}
+		main#tudo section#container div#cards div#card-calculator {
+			border-top: 5px solid var(--blue);
+			order: 3;
+			position: relative;
+			top: 140px;
+			left: 1rem;
+		}
+		main#tudo section#container div#cards div.card {
+			padding: 2rem;
+			border-radius: 5px;
+			background-color: white;
+			box-shadow: 1px 1px 10px var(--grayish-blue), -1px 1px 10px var(--grayish-blue);
+			width: 360px;
+		}
+		main#tudo section#container div#cards div.card div.container-imagem {
+			width: 315.2px;
+			height: 100px;
+			display: flex;
+			justify-content: flex-end;
+			align-items: flex-end;
+		}
+		@media only screen and (max-width: 1090px) {
+			main#tudo section#container div#cards div#card-supervisor {
+				position: static;
+			}
+			main#tudo section#container div#cards div#card-calculator {
+				position: static;
+			}
+			main#tudo section#container div#cards div#card-karma {
+				margin-top: 0px;
+				order: 3;
+			}
+		}
+		@media only screen and (max-width: 719px) {
+			main#tudo {
+				height: 1300px;
+			}
+			main#tudo section#container  header#cabecalho p#texto {
+				width: 320px;
+			}
+			main#tudo section#container header#cabecalho h1 {
+				font-size: 1.8em;
+			}
+			main#tudo section#container div#cards div.card {
+				margin-top: 1rem;
+			}
+			main#tudo section#container div#cards div#card-karma {
+				margin-top: 1rem;
+				order: 3;
+			}
+		}
+		@media only screen and (min-width: 1381px){
+			main#tudo {
+				height: 100vh;
+			}
+		}
+	</style>
+</head>
+<body>
+	<main id="tudo">
+		<section id="container">
+			<header id="cabecalho">
+				<h1 id="titulo1">Reliable, efficient delivery</h1>
+				<h1 id="titulo2">Powered by Technology</h1>
+				<p id="texto">Our Artificial Intelligence powered tools use millions of project data points 
+				to ensure that your project is successful</p>
+			</header>
+			<div id="cards">
+				<div class="card" id="card-supervisor">
+					<h3 class="titulo-card">Supervisor</h3>
+					<p class="texto-card">Monitors activity to identify project roadblocks</p>
+					<div class="container-imagem">
+						<img src="images/icon-supervisor.svg">
+					</div>
+				</div>
+				<div class="card" id="card-team-builder">
+					<h3 class="titulo-card">Team Builder</h3>
+					<p class="texto-card">Scans our talent network to create the optimal team for your project</p>
+					<div class="container-imagem">
+						<img src="images/icon-team-builder.svg">
+					</div>
+				</div>
+				<div class="card" id="card-karma">
+					<h3 class="titulo-card">Karma</h3>
+					<p class="texto-card">Regularly evaluates our talent to ensure quality</p>
+					<div class="container-imagem">
+							<img src="images/icon-karma.svg">
+					</div>
+				</div>
+				<div class="card" id="card-calculator">
+					<h3 class="titulo-card">Calculator</h3>
+					<p class="texto-card">Uses data from past projects to provide better delivery estimates</p>
+					<div class="container-imagem">
+						<img src="images/icon-calculator.svg">
+					</div>
+				</div>
+			</div>
+		</section>
+	</main>
+</body>
+</html>
